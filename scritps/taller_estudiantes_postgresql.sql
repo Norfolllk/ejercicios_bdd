@@ -1,10 +1,28 @@
+DROP TABLE IF EXISTS estudiantes;
+ 
 CREATE TABLE estudiantes (
-    id_estudiante  INT primary key,
+    id_estudiante  INT NOT NULL,
     nombres        VARCHAR(50),
     apellidos      VARCHAR(50),
     edad           INT,
     curso          VARCHAR(50),
     fecha_registro VARCHAR(10),
-	
     CONSTRAINT estudiantes_pk PRIMARY KEY (id_estudiante)
 );
+
+INSERT INTO estudiantes VALUES (1,  'Juan',   'Perez',   20, 'Programacion',          '2026-01-10');
+INSERT INTO estudiantes VALUES (2,  'Maria',  'Lopez',   18, 'Base de Datos',         '2026-01-25');
+INSERT INTO estudiantes VALUES (3,  'Carlos', 'Gomez',   22, 'Redes',                 '2026-02-05');
+INSERT INTO estudiantes VALUES (4,  'Ana',    'Torres',  25, 'Base de Datos',         '2026-02-14');
+INSERT INTO estudiantes VALUES (5,  'Luis',   'Mora',    30, 'Programacion',          '2026-02-28');
+INSERT INTO estudiantes VALUES (6,  'Sofia',  'Vera',    17, 'Inteligencia Artificial','2026-03-01');
+INSERT INTO estudiantes VALUES (7,  'Miguel', 'Ramos',   19, 'Programacion',          '2026-03-15');
+INSERT INTO estudiantes VALUES (8,  'Elena',  'Flores',  28, 'Redes',                 '2026-03-20');
+INSERT INTO estudiantes VALUES (9,  'Pedro',  'Castillo',35, 'Base de Datos',         '2026-04-02');
+INSERT INTO estudiantes VALUES (10, 'Lucia',  'Andrade', 21, 'Diseno Web',            '2026-04-18');
+INSERT INTO estudiantes VALUES (11, 'Juan',   'Perez',   20, 'Base de Datos',         '2026-04-30');
+INSERT INTO estudiantes VALUES (12, 'Maria',  'Lopez',   18, 'Programacion',          '2026-05-05');
+INSERT INTO estudiantes VALUES (13, 'Diego',  'Salazar', 23, 'Inteligencia Artificial','2026-05-11');
+INSERT INTO estudiantes VALUES (14, 'Camila', 'Ortiz',   26, 'Diseno Web',            '2026-02-20');
+INSERT INTO estudiantes VALUES (15, 'Andres', 'Vega',    40, 'Redes',                 '2026-01-05');
+INSERT INTO estudiantes VALUES (16, 'Ana',    'Torres',  25, 'Programacion',          '2026-03-15');
