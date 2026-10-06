@@ -27,6 +27,7 @@ INSERT INTO estudiantes VALUES (14, 'Camila', 'Ortiz',   26, 'Diseno Web',      
 INSERT INTO estudiantes VALUES (15, 'Andres', 'Vega',    40, 'Redes',                 '2026-01-05');
 INSERT INTO estudiantes VALUES (16, 'Ana',    'Torres',  25, 'Programacion',          '2026-03-15');
 
+--SELECT
 --Mostrar todos los registros
 SELECT * FROM estudiantes;
  
@@ -48,6 +49,7 @@ SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
 --Mostrar registrados entre 2026-01-01 y 2026-04-30
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
 
+--UPDATE
 --Cambiar curso
 UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante = 1;
 
@@ -65,3 +67,22 @@ UPDATE estudiantes SET nombres = 'Maria Jose', apellidos = 'Lopez Garcia' WHERE 
 
 -- verificar cambios 
 SELECT * FROM estudiantes ORDER BY id_estudiante;
+
+--DELATE
+--Eliminar por ID
+DELETE FROM estudiantes WHERE id_estudiante = 15;
+
+--Eliminar por curso
+DELETE FROM estudiantes WHERE curso = 'Diseno Web';
+
+--Eliminar por edad
+DELETE FROM estudiantes WHERE edad = 17;
+
+--Eliminar por fecha
+DELETE FROM estudiantes WHERE fecha_registro = '2026-05-11';
+
+--Eliminar por nombres y apellidos
+DELETE FROM estudiantes WHERE nombres = 'Pedro' AND apellidos = 'Castillo';
+
+-- verificar eliminaciones 
+SELECT * FROM estudiantes ORDER BY id_estudiante;  
