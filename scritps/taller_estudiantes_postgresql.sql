@@ -134,3 +134,19 @@ SELECT * FROM estudiantes;
 SELECT nombres, apellidos, correo FROM estudiantes;
 SELECT nombres, curso, correo FROM estudiantes WHERE curso = 'Base de Datos';
  
+
+--CONSULTAS DE FECHAS
+--Mostrar despues de 2026-02-01
+SELECT * FROM estudiantes WHERE fecha_registro > '2026-02-01';
+ 
+--Mostrar antes de 2026-05-01
+SELECT * FROM estudiantes WHERE fecha_registro < '2026-05-01';
+ 
+--Mostrar entre dos fechas
+SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-02-01' AND '2026-03-31';
+ 
+--Mostrar exactamente 2026-03-15
+SELECT * FROM estudiantes WHERE fecha_registro = '2026-03-15';
+ 
+--Mostrar del curso Programacion despues de 2026-01-01
+SELECT * FROM estudiantes WHERE curso = 'Programacion' AND fecha_registro > '2026-01-01';
