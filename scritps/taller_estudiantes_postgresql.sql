@@ -47,3 +47,21 @@ SELECT * FROM estudiantes WHERE fecha_registro > '2026-03-01';
  
 --Mostrar registrados entre 2026-01-01 y 2026-04-30
 SELECT * FROM estudiantes WHERE fecha_registro BETWEEN '2026-01-01' AND '2026-04-30';
+
+--Cambiar curso
+UPDATE estudiantes SET curso = 'Inteligencia Artificial' WHERE id_estudiante = 1;
+
+--Cambiar edad
+UPDATE estudiantes SET edad = 21 WHERE id_estudiante = 3;
+
+--Cambiar fecha
+UPDATE estudiantes SET fecha_registro = '2026-02-10' WHERE id_estudiante = 4;
+
+--Cambiar varios campos (curso y edad)
+UPDATE estudiantes SET curso = 'Redes', edad = 31 WHERE id_estudiante = 5;
+
+--Cambiar varios campos (nombres y apellidos)
+UPDATE estudiantes SET nombres = 'Maria Jose', apellidos = 'Lopez Garcia' WHERE id_estudiante = 2;
+
+-- verificar cambios 
+SELECT * FROM estudiantes ORDER BY id_estudiante;
