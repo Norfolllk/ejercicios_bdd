@@ -86,3 +86,10 @@ DELETE FROM estudiantes WHERE nombres = 'Pedro' AND apellidos = 'Castillo';
 
 -- verificar eliminaciones 
 SELECT * FROM estudiantes ORDER BY id_estudiante;  
+
+
+--MODIFICAR TABLA
+ALTER TABLE estudiantes ADD COLUMN correo VARCHAR(100);
+
+--El correo aparece en NULL 
+SELECT * FROM estudiantes ORDER BY id_estudiante;
